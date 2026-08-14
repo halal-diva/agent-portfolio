@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadence — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F7F5F2;
+      color: #141B21;
+    }
+
+    .hero {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 120px 24px 80px 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+
+    .hero p.context {
+      font-size: 18px;
+      color: #2E3A46;
+      margin-bottom: 16px;
+    }
+
+    .hero p.proof {
+      font-size: 16px;
+      color: #2E3A46;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .hero a.cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #A3501F;
+      text-decoration: none;
+    }
+
+    /* --- AI Recommendation Review --- */
+
+    .recommendation {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .rec-card {
+      background-color: #FFFFFF;
+      border: 1px solid #2E3A46;
+      border-radius: 8px;
+      padding: 40px;
+    }
+
+    .rec-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    .rec-why-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #2E3A46;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .rec-why-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .rec-why-list li {
+      color: #A3501F;
+      font-size: 15px;
+      line-height: 1.7;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .rec-why-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+    }
+
+    .rec-worth {
+      font-weight: 500;
+      font-size: 15px;
+      color: #141B21;
+      margin-bottom: 32px;
+    }
+
+    .rec-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .rec-actions a {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid #2E3A46;
+      color: #2E3A46;
+    }
+
+    .rec-actions a.why-link {
+      border-color: #C4622D;
+      color: #A3501F;
+    }
+
+    /* --- Reasoning Artifact --- */
+
+    .reasoning {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 80px 24px 120px 24px;
+    }
+
+    .reasoning h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      margin-bottom: 48px;
+    }
+
+    .r-block {
+      margin-bottom: 40px;
+    }
+
+    .r-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #2E3A46;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .r-block p {
+      font-size: 16px;
+      color: #2E3A46;
+      line-height: 1.6;
+    }
+
+    .r-hidden {
+      margin: 56px 0;
+      padding: 40px 0;
+      border-top: 1px solid #2E3A46;
+      border-bottom: 1px solid #2E3A46;
+    }
+
+    .r-hidden .r-label {
+      color: #A3501F;
+    }
+
+    .r-hidden p {
+      font-size: 22px;
+      color: #141B21;
+      line-height: 1.5;
+    }
+/* --- Outcome States --- */
+
+    .outcomes {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 120px 24px;
+    }
+
+    .outcomes h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    .outcome-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .outcome-card {
+      flex: 1;
+      min-width: 180px;
+      background-color: #FFFFFF;
+      border: 1px solid #2E3A46;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .outcome-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #2E3A46;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .outcome-card p {
+      font-size: 15px;
+      color: #141B21;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+    <section class="outcomes">
+    <h2>What happens next</h2>
+    <div class="outcome-row">
+      <div class="outcome-card">
+        <div class="outcome-label">Updated</div>
+        <p>Confirmed. Your schedule now reflects the change.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-label">Modified</div>
+        <p>Confirmed. Your adjustment has been saved.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-label">Original</div>
+        <p>Nothing changed. Your schedule stays as it was.</p>
+      </div>
+    </div>
+  </section>
+<body>
+  <section class="hero">
+    <h1>When an AI changes your calendar, it should have to explain itself first — that's how it earns your trust.</h1>
+    <p class="context">Cadence is a cycle-aware AI scheduling assistant — meet Aya, the assistant behind it.</p>
+    <p class="proof">A CV can say you've "designed AI features." It can't show the actual decision of what reasoning to surface, and what to hide, when an algorithm changes someone's calendar without asking first — this case study can.</p>
+    <a href="#recommendation" class="cta">See the moment this gets tested →</a>
+  </section>
+
+  <section class="recommendation" id="recommendation">
+    <div class="rec-card">
+      <h2>Move "Website Redesign" from Monday to Wednesday</h2>
+
+      <div class="rec-why-label">Why</div>
+      <ul class="rec-why-list">
+        <li>Predicted creative score increases from 58% to 89%</li>
+        <li>Sleep recovery is expected to improve</li>
+        <li>No conflicting meetings</li>
+        <li>Similar tasks have historically been completed 24% faster on comparable days</li>
+      </ul>
+
+      <div class="rec-worth">Estimated time saved: 45 minutes</div>
+
+      <div class="rec-actions">
+        <a href="#">Approve</a>
+        <a href="#">Edit</a>
+        <a href="#">Decline</a>
+        <a href="#reasoning" class="why-link">Why this recommendation? →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reasoning" id="reasoning">
+    <h2>Why this recommendation?</h2>
+
+    <div class="r-block">
+      <div class="r-label">AI inputs received</div>
+      <p>Cycle data, calendar availability, workload signals, and sleep/recovery trends.</p>
+    </div>
+
+    <div class="r-block">
+      <div class="r-label">Information surfaced</div>
+      <p>What made the recommendation screen — the creative-score shift, sleep impact, calendar conflicts, and historical task speed.</p>
+    </div>
+
+    <div class="r-hidden">
+      <div class="r-label">Information hidden</div>
+      <p>Raw symptom logs, hormonal trend charts, and day-by-day mood scores didn't make the recommendation screen. They inform the model, but showing them here would turn a scheduling decision into a health dashboard — and bury the one thing you actually need to decide on.</p>
+    </div>
+
+    <div class="r-block">
+      <div class="r-label">Design rationale</div>
+      <p>This is the right amount of transparency: enough reasoning to trust the recommendation, not so much that you have to interpret your own biometrics to use your calendar.</p>
+    </div>
+  </section>
+</body>
+</html>
